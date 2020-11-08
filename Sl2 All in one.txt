@@ -567,7 +567,7 @@ local autofarmoff = Instance.new("TextButton")
 local autofarmtext = Instance.new("TextLabel")
 local equalsign1 = Instance.new("TextLabel")
 local equalsign2 = Instance.new("TextLabel")
-local freekgchangertext = Instance.new("TextLabel")
+local kgchangertext = Instance.new("TextLabel")
 local genkaislot1text = Instance.new("TextLabel")
 local genkaislot2text = Instance.new("TextLabel")
 local instructions = Instance.new("TextLabel")
@@ -650,7 +650,7 @@ ily Lya
 		CanGetScroll = true,
 		CanRankUp    = false,
 		AllowBoss    = true,
-		PlayerHeight = -20, -- If u got a free exploit, change this to above -20
+		PlayerHeight = -10, -- If u got a free exploit, change this to above -20
 		TweenSpeed = 1,
 	}
 
@@ -696,7 +696,7 @@ ily Lya
 		CanGetScroll = true,
 		CanRankUp    = false,
 		AllowBoss    = false,
-		PlayerHeight = -20, -- If u got a free exploit, change this to above -20
+		PlayerHeight = -10, -- If u got a free exploit, change this to above -20
 		TweenSpeed = 1,
 	}
 
@@ -760,7 +760,7 @@ ily Lya
 		CanGetScroll = false,
 		CanRankUp    = false,
 		AllowBoss    = false,
-		PlayerHeight = -20, -- If u got a free exploit, change this to above -20
+		PlayerHeight = -10, -- If u got a free exploit, change this to above -20
 		TweenSpeed = 1,
 	}
 
