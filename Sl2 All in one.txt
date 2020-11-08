@@ -650,7 +650,7 @@ ily Lya
 		CanGetScroll = true,
 		CanRankUp    = false,
 		AllowBoss    = true,
-		PlayerHeight = -10, -- If u got a free exploit, change this to above -20
+		PlayerHeight = -25, -- If u got a free exploit, change this to above -20
 		TweenSpeed = 1,
 	}
 
@@ -696,7 +696,7 @@ ily Lya
 		CanGetScroll = true,
 		CanRankUp    = false,
 		AllowBoss    = false,
-		PlayerHeight = -10, -- If u got a free exploit, change this to above -20
+		PlayerHeight = -25, -- If u got a free exploit, change this to above -20
 		TweenSpeed = 1,
 	}
 
@@ -760,7 +760,7 @@ ily Lya
 		CanGetScroll = false,
 		CanRankUp    = false,
 		AllowBoss    = false,
-		PlayerHeight = -10, -- If u got a free exploit, change this to above -20
+		PlayerHeight = -25, -- If u got a free exploit, change this to above -20
 		TweenSpeed = 1,
 	}
 
