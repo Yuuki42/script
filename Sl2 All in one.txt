@@ -60,7 +60,7 @@ if villageplace or game.PlaceId == trainingplace or game.PlaceId == rainplace or
 		TextColor = Color3.fromRGB(255,255,255); 
 		BgColor = Color3.fromRGB(247, 95, 28);
 	}) 
-	
+
 	local scrollfarm
 	b:Toggle("Scroll Sniper",function(bool)
 		scrollfarm = bool
@@ -105,6 +105,16 @@ if villageplace or game.PlaceId == trainingplace or game.PlaceId == rainplace or
 		toTarget(player.Character.HumanoidRootPart.Position,workspace.npc.logtraining:FindFirstChild("HumanoidRootPart").Position,CFrame.new(game:GetService("Workspace").npc.logtraining:FindFirstChild("HumanoidRootPart").Position))
 	end)
 
+	game:GetService('RunService').Stepped:connect(function()
+		if autofarm or candies then
+			pcall(function()
+				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			end)
+		end
+	end)
+	local green = "http://www.roblox.com/asset/?id=5459241648"
+	local red = "http://www.roblox.com/asset/?id=5459241799"
+	local candy = "http://www.roblox.com/asset/?id=5710748193"
 	spawn(function()
 		while wait() do
 			if autofarm then
@@ -182,7 +192,7 @@ if villageplace or game.PlaceId == trainingplace or game.PlaceId == rainplace or
 			end
 		end
 	end)
-		local function SCROLLFARM()
+	local function SCROLLFARM()
 		for i,v in pairs(game.workspace.GLOBALTIME:GetChildren()) do
 			if v.ClassName == "Model" and v:FindFirstChild("sh") and v.sh.Position.Y > -1000 and v.sh.Position.Y < 2000 then
 				local scrollA = v.sh:FindFirstChild("invoke")
@@ -642,7 +652,7 @@ local autofarmoff = Instance.new("TextButton")
 local autofarmtext = Instance.new("TextLabel")
 local equalsign1 = Instance.new("TextLabel")
 local equalsign2 = Instance.new("TextLabel")
-local kgchangertext = Instance.new("TextLabel")
+local freekgchangertext = Instance.new("TextLabel")
 local genkaislot1text = Instance.new("TextLabel")
 local genkaislot2text = Instance.new("TextLabel")
 local instructions = Instance.new("TextLabel")
@@ -709,14 +719,14 @@ autofarmon.TextColor3 = Color3.fromRGB(255, 255, 255)
 autofarmon.TextSize = 14.000
 autofarmon.MouseButton1Down:connect(function()
 --[[
- 
+
  █████╗ ██╗   ██╗ █████╗ ██╗  ██╗██╗██████╗                ██╗   ███████╗
 ██╔══██╗██║   ██║██╔══██╗██║ ██╔╝██║██╔══██╗              ███║   ╚════██║
 ███████║██║   ██║███████║█████╔╝ ██║██████╔╝    █████╗    ╚██║       ██╔╝
 ██╔══██║╚██╗ ██╔╝██╔══██║██╔═██╗ ██║██╔══██╗    ╚════╝     ██║      ██╔╝ 
 ██║  ██║ ╚████╔╝ ██║  ██║██║  ██╗██║██║  ██║               ██║██╗   ██║  
 ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝               ╚═╝╚═╝   ╚═╝  
- 
+
 ily Lya                                                                                                                              
 --]]
 
@@ -755,14 +765,14 @@ nobosses.TextColor3 = Color3.fromRGB(255, 255, 255)
 nobosses.TextSize = 14.000
 nobosses.MouseButton1Down:connect(function()
 --[[
- 
+
  █████╗ ██╗   ██╗ █████╗ ██╗  ██╗██╗██████╗                ██╗   ███████╗
 ██╔══██╗██║   ██║██╔══██╗██║ ██╔╝██║██╔══██╗              ███║   ╚════██║
 ███████║██║   ██║███████║█████╔╝ ██║██████╔╝    █████╗    ╚██║       ██╔╝
 ██╔══██║╚██╗ ██╔╝██╔══██║██╔═██╗ ██║██╔══██╗    ╚════╝     ██║      ██╔╝ 
 ██║  ██║ ╚████╔╝ ██║  ██║██║  ██╗██║██║  ██║               ██║██╗   ██║  
 ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝               ╚═╝╚═╝   ╚═╝  
- 
+
 ily Lya                                                                                                                              
 --]]
 
@@ -819,14 +829,14 @@ autofarmoff.TextColor3 = Color3.fromRGB(255, 255, 255)
 autofarmoff.TextSize = 14.000
 autofarmoff.MouseButton1Down:connect(function()
 --[[
- 
+
  █████╗ ██╗   ██╗ █████╗ ██╗  ██╗██╗██████╗                ██╗   ███████╗
 ██╔══██╗██║   ██║██╔══██╗██║ ██╔╝██║██╔══██╗              ███║   ╚════██║
 ███████║██║   ██║███████║█████╔╝ ██║██████╔╝    █████╗    ╚██║       ██╔╝
 ██╔══██║╚██╗ ██╔╝██╔══██║██╔═██╗ ██║██╔══██╗    ╚════╝     ██║      ██╔╝ 
 ██║  ██║ ╚████╔╝ ██║  ██║██║  ██╗██║██║  ██║               ██║██╗   ██║  
 ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝               ╚═╝╚═╝   ╚═╝  
- 
+
 ily Lya                                                                                                                              
 --]]
 
@@ -967,7 +977,7 @@ local function DOEQ_fake_script() -- Frame.LocalScript
 
 	local frame = script.Parent -- path to the frame
 	local mouse = game:GetService('Players').LocalPlayer:GetMouse(); -- we need the mouse object, which also has the keyboard
-	
+
 	mouse.KeyDown:connect(function(key) -- whenever a key is pushed down
 		key = key:lower() -- i do this in all my key events, though i don't remember why
 		if key == 'p' then -- if key pressed is h
